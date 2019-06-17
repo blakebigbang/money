@@ -1,4 +1,3 @@
-const Expression = require("./Expression");
 const Sum = require("./Sum");
 
 class Money {
