@@ -1,17 +1,16 @@
 const Money = require("../Money");
-const Dollar = require("../Dollar");
-const Franc = require("../Franc");
 
 test("test multiplication", () => {
-  const five = new Money(5, "USD");
+  const five = Money.dollar(5);
 
-  expect(new Dollar(10).amount).toStrictEqual(five.times(2).amount);
-  expect(new Dollar(15).amount).toStrictEqual(five.times(3).amount);
+  expect(Money.dollar(10)).toStrictEqual(five.times(2));
+  expect(Money.dollar(15)).toStrictEqual(five.times(3));
 });
 
 test("test equality", () => {
-  expect(new Dollar(5).equals(new Dollar(5))).toBe(true);
-  expect(new Dollar(5).equals(new Dollar(6))).toBe(false);
-  expect(new Dollar(5).equals(new Franc(6))).toBe(false);
-  expect(new Dollar(5).equals(new Franc(5))).toBe(false);
+  expect(Money.dollar(5).equals(Money.dollar(5))).toBe(true);
+  expect(Money.dollar(5).equals(Money.dollar(6))).toBe(false);
+  expect(Money.franc(5).equals(Money.franc(6))).toBe(false);
+  expect(Money.franc(5).equals(Money.franc(6))).toBe(false);
+  expect(Money.dollar(6).equals(Money.franc(6))).toBe(false);
 });

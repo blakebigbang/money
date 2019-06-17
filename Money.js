@@ -4,11 +4,11 @@ class Money {
     this.currency = currency;
   }
 
-  dollar(amount) {
+  static dollar(amount) {
     return new Money(amount, "USD");
   }
 
-  franc(amount) {
+  static franc(amount) {
     return new Money(amount, "FRA");
   }
 
