@@ -1,3 +1,5 @@
+const Expression = require("./Expression");
+
 class Money {
   constructor(amount, currency) {
     this.amount = amount;
@@ -18,6 +20,10 @@ class Money {
 
   times(multiplier) {
     return new Money(this.amount * multiplier, this.currency);
+  }
+
+  plus(object) {
+    return new Money(this.amount + object.amount, this.currency);
   }
 }
 
