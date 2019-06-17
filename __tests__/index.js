@@ -1,10 +1,18 @@
 const Dollar = require("../Dollar");
+const Franc = require("../Franc");
 
-test("test multiplication", () => {
+test("test Dollar multiplication", () => {
   const five = new Dollar(5);
 
-  expect(five.times(2)).toStrictEqual(new Dollar(10));
-  expect(five.times(3)).toStrictEqual(new Dollar(15));
+  expect(new Dollar(10)).toStrictEqual(five.times(2));
+  expect(new Dollar(15)).toStrictEqual(five.times(3));
+});
+
+test("test Franc multiplication", () => {
+  const five = new Franc(5);
+
+  expect(new Franc(10)).toStrictEqual(five.times(2));
+  expect(new Franc(15)).toStrictEqual(five.times(3));
 });
 
 test("test equality", () => {
