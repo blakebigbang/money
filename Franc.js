@@ -1,14 +1,12 @@
-class Franc {
+const Money = require("./Money");
+
+class Franc extends Money {
   constructor(amount) {
-    this.amount = amount;
+    super(amount);
   }
 
   times(multiplier) {
     return new Franc(this.amount * multiplier);
-  }
-
-  equals(object) {
-    return this.amount === object.amount;
   }
 }
 
