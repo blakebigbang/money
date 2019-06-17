@@ -1,9 +1,9 @@
-const Dollar = require("../index");
+const Dollar = require("../Dollar");
 
 test("test multiplication", () => {
   const five = new Dollar(5);
 
   five.times(2);
 
-  expect(10, five.amount);
+  expect(five.amount).toBe(10);
 });
