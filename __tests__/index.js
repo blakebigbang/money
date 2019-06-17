@@ -1,3 +1,4 @@
+const Money = require("../Money");
 const Dollar = require("../Dollar");
 const Franc = require("../Franc");
 
