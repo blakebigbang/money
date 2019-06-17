@@ -1,5 +1,5 @@
 class Dollar {
-  constructor() {}
+  // constructor() {}
 }
 
 module.exports = Dollar;
