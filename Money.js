@@ -1,4 +1,5 @@
 const Expression = require("./Expression");
+const Sum = require("./Sum");
 
 class Money {
   constructor(amount, currency) {
@@ -23,7 +24,7 @@ class Money {
   }
 
   plus(object) {
-    return new Money(this.amount + object.amount, this.currency);
+    return new Sum(this, object);
   }
 }
 

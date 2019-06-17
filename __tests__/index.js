@@ -1,6 +1,6 @@
 const Money = require("../Money");
 const Bank = require("../Bank");
-const Expression = require("../Expression");
+const Sum = require("../Sum");
 
 test("test multiplication", () => {
   const five = Money.dollar(5);
@@ -33,4 +33,25 @@ test("test simple addition", () => {
   const reduced = bank.reduce(sum, "USD");
 
   expect(Money.dollar(10)).toStrictEqual(reduced);
+});
+
+test("test plus returns sum", () => {
+  const five = Money.dollar(5);
+
+  // Expression class
+  const result = five.plus(five);
+
+  // Sum class
+  const sum = result;
+
+  expect(five).toBe(sum.augend);
+  expect(five).toBe(sum.addend);
+});
+
+test("test reduce sum", () => {
+  const sum = new Sum(Money.dollar(3), Money.dollar(5));
+  const bank = new Bank();
+  const result = bank.reduce(sum, "USD");
+
+  expect(Money.dollar(7)).toStrictEqual(result);
 });
