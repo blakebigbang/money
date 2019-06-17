@@ -9,7 +9,7 @@ class Money {
   }
 
   static franc(amount) {
-    return new Money(amount, "FRA");
+    return new Money(amount, "CHF");
   }
 
   equals(object) {
