@@ -4,7 +4,7 @@ class Sum {
     this.addend = addend;
   }
 
-  reduce(to, Money) {
+  reduce(to, Money, Bank) {
     const amount = this.augend.amount + this.addend.amount;
 
     return new Money(amount, to);

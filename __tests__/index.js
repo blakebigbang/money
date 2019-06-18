@@ -54,3 +54,18 @@ test("test reduce sum", () => {
 
   expect(result).toStrictEqual(Money.dollar(7));
 });
+
+test("test reduce money", () => {
+  const bank = new Bank();
+  const result = bank.reduce(Money.dollar(1), "USD");
+
+  expect(result).toStrictEqual(Money.dollar(1));
+});
+
+test("test reduce money of a different currency", () => {
+  const bank = new Bank();
+  bank.addRate("CHF", "USD", 2);
+  const result = bank.reduce(Money.franc(2), "USD");
+
+  expect(Money.dollar(1)).toStrictEqual(result);
+});
