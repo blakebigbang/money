@@ -38,7 +38,6 @@ test("test simple addition", () => {
 test("test plus returns sum", () => {
   const five = Money.dollar(5);
 
-  // Expression class
   const result = five.plus(five);
 
   // Sum class
