@@ -1,6 +1,6 @@
-const Money = require("../Money");
-const Bank = require("../Bank");
-const Sum = require("../Sum");
+const Money = require("../src/Money");
+const Bank = require("../src/Bank");
+const Sum = require("../src/Sum");
 
 test("test multiplication", () => {
   const five = Money.dollar(5);
