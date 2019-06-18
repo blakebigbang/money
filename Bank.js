@@ -16,6 +16,8 @@ class Bank {
   }
 
   rate(from, to) {
+    if (from === to) return 1;
+
     const ratePair = new Pair(from, to);
 
     const rateIndex = this.rates.findIndex(rateObj => {
