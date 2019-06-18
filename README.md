@@ -1,5 +1,10 @@
 # Test-Driven Development: Money Example
 
+## Technologies Used
+
+- JavaScript
+- Jest / testing (in `/__tests__` folder)
+
 ## Exploration of TTD
 
 In summary, the methodology known as `Test-Driven Development` results in cleaner code that works. The main benefit that I see is the sheer focus that gets directed to writing tests in the first place. Without this, I believe I wouldn't have bothered to write tests at all because my experience in a fast-paced work environment did not leave much time for such luxuries.
