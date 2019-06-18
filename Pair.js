@@ -10,9 +10,9 @@ class Pair {
     return this.from === pair.from && this.to === pair.to;
   }
 
-  hashCode() {
-    return 0;
-  }
+  // hashCode() {
+  //   return 0;
+  // }
 }
 
 module.exports = Pair;
