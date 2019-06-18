@@ -77,3 +77,14 @@ test("test identity rates", () => {
   expect(new Bank().rate("USD", "USD")).toBe(1);
   expect(new Bank().rate("CHF", "CHF")).toBe(1);
 });
+
+test("test mixed currency addition", () => {
+  const fiveBucks = Money.dollar(5);
+  const tenFrancs = Money.franc(10);
+
+  const bank = new Bank();
+  bank.addRate("CHF", "USD", 2);
+  const result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
+
+  expect(Money.dollar(10)).toBe(result);
+});
