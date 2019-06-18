@@ -86,5 +86,5 @@ test("test mixed currency addition", () => {
   bank.addRate("CHF", "USD", 2);
   const result = bank.reduce(fiveBucks.plus(tenFrancs), "USD");
 
-  expect(Money.dollar(10)).toBe(result);
+  expect(Money.dollar(10)).toStrictEqual(result);
 });
