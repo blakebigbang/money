@@ -15,6 +15,14 @@ class Sum {
 
     return new Money(amount, to);
   }
+
+  plus(addend) {
+    return new Sum(this, addend);
+  }
+
+  times(mutiplier) {
+    return new Sum(this.augend.times(mutiplier), this.addend.times(mutiplier));
+  }
 }
 
 module.exports = Sum;
